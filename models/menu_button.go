@@ -6,12 +6,12 @@ import (
 	"fmt"
 )
 
-type MenuButtonType int
+type MenuButtonType string
 
 const (
-	MenuButtonTypeCommands MenuButtonType = iota
-	MenuButtonTypeWebApp
-	MenuButtonTypeDefault
+	MenuButtonTypeCommands MenuButtonType = "commands"
+	MenuButtonTypeWebApp                  = "web_app"
+	MenuButtonTypeDefault                 = "default"
 )
 
 type InputMenuButton interface {
