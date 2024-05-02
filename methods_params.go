@@ -625,8 +625,8 @@ type GetMyShortDescriptionParams struct {
 }
 
 type SetChatMenuButtonParams struct {
-	ChatID     any                    `json:"chat_id,omitempty"`
-	MenuButton models.InputMenuButton `json:"menu_button"`
+	ChatID     any               `json:"chat_id,omitempty"`
+	MenuButton models.MenuButton `json:"menu_button"`
 }
 
 type GetChatMenuButtonParams struct {
