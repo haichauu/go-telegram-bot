@@ -30,7 +30,7 @@ type MenuButton struct {
 func (c *MenuButton) UnmarshalJSON(data []byte) error {
 	if bytes.Contains(data, []byte(`"type":"commands"`)) {
 		c.Type = MenuButtonTypeCommands
-		c.Commands = &MenuButtonCommands{}
+		c.Commands = []MenuButtonCommands{}
 		return json.Unmarshal(data, c.Commands)
 	}
 	if bytes.Contains(data, []byte(`"type":"web_app"`)) {
